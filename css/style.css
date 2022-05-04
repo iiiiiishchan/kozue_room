@@ -367,6 +367,15 @@ nav {
   box-shadow: 4px 4px 2px;
 }
 
+.deko2 {
+  padding-top: 16px;
+}
+
+.deko {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .map {
   text-align: center;
   padding: 48px 0;
