@@ -10,45 +10,90 @@
 
 <body>
   <header>
-    <div class="container">
-    <a href="">
-      <h1>
-        <img class="logo"
-          src="img/logo.png" 
-          alt="こずえの部屋のロゴです"
-          width="100"
-          height="100">
-        </h1>
+    <a href="#">
+      <img class="logo"
+        src="img/logo.png" 
+        alt="こずえの部屋のロゴです"
+        width="100"
+        height="100">
     </a>
-      <nav>
-        <ul class="menu">
-          <li><a link href="#hero">こずえ<span>って</span><br>こんな人</a></li>
+    <div class="pc-menu">
+      <nav class="menu">
+        <ul>
+          <li><a link href="#hero">こずえ<span>って<br></span>こんな人</a></li>
           <li><a link href="#job">こずえ<span>が</span><br>できること</a></li>
           <li><a link href="#wax">こずえ<span>の</span><br>イチオシ</a></li>
           <li><a link href="https://beauty.hotpepper.jp/kr/slnH000553058/blog/" target="_blank">こずえ<span>の</span><br>ブログ</a></li>
           <li><a link href="#meet">こずえ<span>に</span><br>会いに行く</a></li>
         </ul>
       </nav>
-      <div class="logo">
+      <div class="icon">
         <a href="https://twitter.com/Lima_kozue"
-         target="_blank">
-          <img
-          src="img/twitter.png"
-          alt="ツイッターのロゴです"
-          width="40"
-          height="40">
-        </a>
-        <a href="https://beauty.hotpepper.jp/kr/slnH000553058/"
-          target="_blank">
-          <img
-          src="img/hp.logo.png"
-          alt="ホットペッパービューティーのロゴです"
-          width="35"
-          height="35">
-        </a>
+        target="_blank">
+        <img
+        src="img/twitter.png"
+        alt="ツイッターのアイコンです"
+        width="40"
+        height="40">
+      </a>
+      <a href="https://beauty.hotpepper.jp/kr/slnH000553058/"
+      target="_blank">
+      <img
+      src="img/hp.logo.png"
+      alt="ホットペッパービューティーのアイコンです"
+      width="35"
+      height="35">
+      </a>
+      </div> 
+    </div>
+
+    <div class="sp-menu">
+      <div class="icon">
+        <a href="https://twitter.com/Lima_kozue"
+        target="_blank">
+        <img
+        src="img/twitter.png"
+        alt="ツイッターのアイコンです"
+        width="40"
+        height="40">
+      </a>
+      <a href="https://beauty.hotpepper.jp/kr/slnH000553058/"
+      target="_blank">
+      <img
+      src="img/hp.logo.png"
+      alt="ホットペッパービューティーのアイコンです"
+      width="35"
+      height="35">
+      </a>
+      </div> 
+      <div id="open">
+        <img
+        src="img/menu.png"
+        alt="メニューボタンです"
+        width="50"
+        height="50">
       </div>
     </div>
   </header>
+
+  <div class="overlay">
+    <div id="close">
+      <img
+      src="img/batu.png"
+      alt="閉じるボタンです"
+      width="30"
+      height="30">
+    </div>
+    <nav>
+      <ul>
+        <li><a link href="#kozue" id="menu1">こずえ<span>って</span>こんな人</a></li>
+        <li><a link href="#job" id="menu2">こずえ<span>が</span>できること</a></li>
+        <li><a link href="#wax" id="menu3">こずえ<span>の</span>イチオシ</a></li>
+        <li><a link href="https://beauty.hotpepper.jp/kr/slnH000553058/blog/" target="_blank" id="menu4">こずえ<span>の</span>ブログ</a></li>
+        <li><a link href="#meet" id="menu5">こずえ<span>に</span>会いに行く</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- トップ -->
   <section class="hero">
@@ -80,7 +125,7 @@
 
   <!-- こずえってこんな人 -->
   <div class="hokuou">
-  <section class="story">
+  <section class="story" id="kozue">
     <div class="container">
       <div class="desc">
         <h2>こずえ<span>って</span>こんな人</h2>
@@ -113,7 +158,7 @@
   </section>
 
   <!-- こずえができる事 -->
-  <section class="job">
+  <section class="job" id="job">
     <div class="container">
       <div class="desc">
         <h2>こずえ<span>が</span>できること</h2>
@@ -258,11 +303,28 @@
           サロンでお待ちしております◎◎<br>
         </p>
       </div>
-      <div class="pic">
-        <img class="home"
-        src="img/home01.png"
-        alt="お客様との写真です">
-      </div>
+      <section class="carousel">
+        <div class="pic">
+          <ul id="pics">
+            <li><img src="img/cpic01.png"></li>
+            <li><img src="img/cpic02.png"></li>
+            <li><img src="img/cpic03.png"></li>
+            <li><img src="img/cpic04.png"></li>
+            <li><img src="img/cpic05.png"></li>
+          </ul>
+          
+          <button id="prev">&laquo;</button>
+          <button id="next">&raquo;</button>
+        
+          <nav class="navs">
+            <button class="current"></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+          </nav>
+        </div>
+      </section>
     </div>
   </section>
 
@@ -383,5 +445,6 @@
     <small>(c) 2022 iiiiiishchan</small>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
