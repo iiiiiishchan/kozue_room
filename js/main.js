@@ -54,6 +54,7 @@
   const prev = document.getElementById('prev');
   const pics = document.getElementById('pics');
   const slides = pics.children;
+  const dots = [];
   let currentIndex = 0;
 
   function updateButtons() {
@@ -73,17 +74,47 @@
     pics.style.transform = `translateX(${-1 * slideWidth * currentIndex}px)`;
   }
 
+  function setupDots() {
+    for (let i = 0; i < slides.length; i++) {
+      const button = document.createElement('button');
+      button.addEventListener('click', () => {
+        currentIndex = i;
+        updateDots();
+        updateButtons();
+        moveSlides();
+      });
+      dots.push(button);
+      document.getElementById('navs').appendChild(button);
+    }
+
+    dots[0].classList.add('current');
+  }
+
+  function updateDots() {
+    dots.forEach(dot => {
+      dot.classList.remove('current');
+    });
+    dots[currentIndex].classList.add('current');
+  }
+
   updateButtons();
+  setupDots();
   
   next.addEventListener('click', () => {
     currentIndex++;
     updateButtons();
     moveSlides();
+    updateDots();
   });
   
   prev.addEventListener('click', () => {
     currentIndex--;
     updateButtons();
+    moveSlides();
+    updateDots();
+  });
+  
+  window.addEventListener('resize', () => {
     moveSlides();
   });
 }

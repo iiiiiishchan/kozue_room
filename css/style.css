@@ -347,13 +347,6 @@ header .menu {
   margin-top: 0;
 }
 
-/* .picture .container .pic .home {
-  border-radius: 10%;
-  width: calc(100% - 32px);
-  margin-top: 16px;
-  margin-bottom: 8px;
-} */
-
 .picture .container .carousel {
   width: calc(100% - 16px);
   margin: 16px 8px 0 8px;
@@ -424,11 +417,11 @@ header .menu {
   align-items: center;
 }
 
-.picture .container .carousel .pic nav button + button {
-  margin-left: 8px;
+.picture .container .carousel .pic #navs button + button {
+  margin-left: 4px;
 }
 
-.picture .container .carousel .pic nav button {
+.picture .container .carousel .pic #navs button {
   border: none;
   width: 16px;
   height: 16px;
@@ -437,7 +430,7 @@ header .menu {
   cursor: pointer;
 }
 
-.picture .container .carousel .pic nav .current {
+.picture .container .carousel .pic #navs .current {
   background: #999;
 }
 
